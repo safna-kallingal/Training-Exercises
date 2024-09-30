@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                color:yellow;
+            }
+            label{
+                color:orange;
+            }
+            footer{
+                background-color: lightgrey;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+            footer a{
+                color:black;
+                text-decoration:none;
+            }
+            ul.nav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color:#333;
+                display:flex;
+                justify-content: center; 
+              }
+              li {
+                margin:0;
+              }
+            li a {
+
+                display:block;
+                color:white;
+                text-align:center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+            li a:hover {
+                background-color: #111;
+                }
+            .cont{
+                background-color:#333;
+                padding:20px;
+                width:50%;
+                margin:20px auto;
+                border-radius:10px;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact Form Exercise</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body background="wp2555019.jpg">
+        <center>
+            <h1 style="color:gold;background-color: rgba(51, 51, 51, 0.5);;">Contact Form Exercise</h1>
+            <ul class="nav">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </center>
+        <center>
+        <div class="cont"><h1>Contact Us</h1>
+        <form>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="mail">Email:</label>
+            <input type="text" id="mail" name="mail"><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="bumber" id="phone" name="phone"><br><br>
+            <label for="msg">Message:</label>
+            <input type="text" id="msg" name="msg"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        
+        </center></div>
+        <footer>
+            <a href="#">&copy; 2024 My First Contact Form</a>
+        </footer>
+        <script src="" async defer></script>
+    </body>
+</html>
