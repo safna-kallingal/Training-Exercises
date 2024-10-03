@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Navigation bar */
+        .nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+        }
+
+        .nav li {
+            display: inline;
+        }
+
+        .nav li a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: #111;
+        }
+
+        /* Block elements */
+        .block-element {
+            display: block;
+            width: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+
+        /* Inline elements */
+        .inline-element {
+            display: inline;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: white;
+            margin: 5px;
+        }
+
+        /* Inline-block elements */
+        .inline-block-element {
+            display: inline-block;
+            padding: 15px 20px;
+            background-color: #FF9800;
+            color: white;
+            margin: 5px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Display Property Examples</h1>
+
+    <!-- Navigation bar -->
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Block elements -->
+    <div class="block-element">Block Element 1 (display: block)</div>
+    <div class="block-element">Block Element 2 (display: block)</div>
+    <div class="block-element">Block Element 3 (display: block)</div>
+
+    <!-- Inline elements -->
+    <div style="text-align: center; margin-top: 20px;">
+        <span class="inline-element">Inline Element 1</span>
+        <span class="inline-element">Inline Element 2</span>
+        <span class="inline-element">Inline Element 3</span>
+    </div>
+
+    <!-- Inline-block elements -->
+    <div style="text-align: center; margin-top: 20px;">
+        <span class="inline-block-element">Inline-Block 1</span>
+        <span class="inline-block-element">Inline-Block 2</span>
+        <span class="inline-block-element">Inline-Block 3</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Display Property Examples
+    </footer>
+</body>
+</html>

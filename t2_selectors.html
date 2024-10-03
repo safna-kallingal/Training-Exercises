@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Practice</title>
+    <link rel="stylesheet" href="t2_selectors.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors Practice</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="selector-example">
+            <h2>Universal Selector Example</h2>
+            <p>This paragraph is styled using the universal selector <code>*</code> which applies to all elements.</p>
+        </section>
+
+        <section class="selector-example">
+            <h2>Type Selector Example</h2>
+            <h3>Headings and Paragraphs</h3>
+            <p>This is an example of a paragraph styled by the type selector.</p>
+        </section>
+
+        <section class="selector-example highlight">
+            <h2>Class Selector Example</h2>
+            <p>This section is styled using a class selector named <code>.highlight</code>.</p>
+        </section>
+
+        <section class="selector-example unique">
+            <h2>ID Selector Example</h2>
+            <p>This section is styled using an ID selector named <code>#unique</code>.</p>
+        </section>
+
+        <section class="selector-example">
+            <h2>Attribute Selector Example</h2>
+            <form>
+                <label for="name">Type your name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+            </form>
+        </section>
+
+        <section class="selector-example">
+            <h2>Descendant Selector Example</h2>
+            <div>
+                <p>This paragraph is inside a div and styled by a descendant selector <code>div p</code>.</p>
+            </div>
+        </section>
+
+        <section class="selector-example">
+            <h2>Child Selector Example</h2>
+            <ul>
+                <li>First child item styled using child selector <code>ul > li</code>.</li>
+                <li>Another child item in the list.</li>
+            </ul>
+        </section>
+
+        <section class="selector-example">
+            <h2>Adjacent Sibling Selector Example</h2>
+            <h3>This is a heading</h3>
+            <p>This paragraph is styled as an adjacent sibling to the above heading <code>h2 + p</code>.</p>
+        </section>
+        <section class="selector-example">
+            <h2>General Sibling Selector Example</h2>
+            <h3>This is a heading</h3>
+            <p>This paragraph is styled as an general sibling to the above heading <code>h2 ~ p</code>.</p>
+            <p>Another sibling paragraph styled in the same way</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CSS Selectors Practice</p>
+    </footer>
+</body>
+</html>

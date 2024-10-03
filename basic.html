@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        /* Styling for pseudo-classes */
+.pseudo-section ul li {
+    color: #666;
+    font-size: 1.1em;
+    margin: 10px 0;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover pseudo-class */
+.pseudo-section ul li:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Active pseudo-class */
+.pseudo-section ul li:active {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Focus pseudo-class */
+.pseudo-section ul li:focus {
+    outline: 2px solid #333;
+}
+
+.pseudo-section ul li a:visited {
+    color: purple;
+}
+/* Styling for the pseudo-section */
+.pseudo-section p {
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px;
+}
+
+/* Pseudo-element before the start span */
+.pseudo-start::before {
+    content: '>> ';
+    color: green;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Pseudo-element after the end span */
+.pseudo-end::after {
+    content: ' <<';
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Pseudo-element before the paragraph */
+.pseudo-section p::before {
+    content: "Attention: ";
+    font-weight: bold;
+    color: orange;
+}
+
+/* Pseudo-element after the paragraph */
+.pseudo-section p::after {
+    content: " (Thank you!)";
+    font-weight: bold;
+    color: blue;
+}
+
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Basics Review</title>
+    <link rel="stylesheet" href="basics.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>CSS Basics Review</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+      <h2>Introduction:</h2>
+      <p style="color: slateblue; font-size: 20px; line-height: 2.5">
+        CSS stands for Cascading Style Sheets CSS describes how HTML elements
+        are to be displayed on screen, paper, or in other media CSS saves a lot
+        of work. It can control the layout of multiple web pages all at once
+        External stylesheets are stored in CSS files
+      </p>
+    </section>
+
+    <!-- Box Section -->
+    <section class="box-container">
+      <div
+        class="box"
+        style="
+          background-color: yellow;
+          border-style: dotted;
+          border-width: 10px;
+        "
+      >
+        <h3>Box 1: Title</h3>
+        <p>Content 1</p>
+        <p>css</p>
+      </div>
+      <div class="box" 
+        style="
+            background-color: pink;
+            border-style: double;
+            border-width: 10px;
+            border-color:black;
+        
+      ">
+        <h3>Box 2: Title</h3>
+        <p>Content 2</p>
+        <p>css</p>
+      </div>
+      <div class="box" 
+        style="
+            background-color: aqua;
+            border-style: ridge;
+            border-width: 10px;
+            border-color:black;
+            ">
+        <h3>Box 3: Title</h3>
+        <p>Content 3</p>
+        <p>css</p>
+      </div>
+    </section>
+
+    <!-- Pseudo-Classes and Pseudo-Elements Section -->
+    <section class="pseudo-section">
+      <h2>Pseudo-Classes Example:</h2>
+      <ul>
+        <li>Item 1 (hover, active, etc.)</li>
+        <li>Item 2</li>
+      </ul>
+      <h2>Pseudo-Elements Example:</h2>
+      <p>
+        <span class="pseudo-start">Start:</span> ::before and ::after applied to
+        this paragraph <span class="pseudo-end">:End</span>
+      </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 CSS Basics Review</p>
+    </footer>
+  </body>
+</html>
