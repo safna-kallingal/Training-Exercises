@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+      }
+
+      /* Navigation Bar */
+      .nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        text-align: center;
+      }
+
+      .nav li {
+        display: inline;
+      }
+
+      .nav li a {
+        display: inline-block;
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+
+      .nav li a:hover {
+        background-color: #111;
+      }
+
+      /* Flexbox Container */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      /* Flexbox Items (Content Boxes) */
+      .box {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        margin: 10px;
+        width: 200px;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      footer {
+        margin-top: 50px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox Layout Example</h1>
+
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="container">
+      <div class="box">
+        A computer is an electronic device designed to perform tasks that
+        involve processing, storing, and retrieving information. It operates
+        using a combination of hardware (physical components) and software
+        (programs and data) to execute instructions, making it capable of
+        performing a vast array of functions, from simple calculations to
+        complex simulations and automation.
+      </div>
+      <div class="box">
+        Central Processing Unit (CPU): Often referred to as the brain of the
+        computer, the CPU processes instructions from software and performs
+        calculations.
+      </div>
+      <div class="box">
+        Memory (RAM): Random Access Memory (RAM) temporarily stores data that is
+        being used by the CPU for quick access. Storage: Includes devices like
+        hard drives (HDDs) or solid-state drives (SSDs) that store data and
+        applications permanently.
+      </div>
+      <div class="box">
+        Flexbox (short for Flexible Box Layout) is a CSS layout module that
+        provides an efficient way to align and distribute space among items in a
+        container, even when their sizes are dynamic or unknown. It is
+        particularly useful for building complex, responsive layouts in modern
+        web design.
+      </div>
+      <div class="box">
+        A flex container is the parent element that holds flex items. Declared
+        by setting display: flex; or display: inline-flex; on the container.
+      </div>
+      <div class="box">
+        These are the child elements within a flex container. The arrangement of
+        these items is controlled using flexbox properties, which adjust their
+        size, spacing, and alignment.
+      </div>
+    </div>
+
+    <footer>&copy; 2024 Flexbox Layout Example</footer>
+  </body>
+</html>
