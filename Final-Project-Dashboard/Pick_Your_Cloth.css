@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(121, 212, 239);
+    width: 100%;
+}
+
+.container:first-of-type {
+    background-color: #fff;
+    max-width: 1400px;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Responsive layout for sidebar and main content */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blue {
+    color: #007bff; 
+}
+
+.black {
+    color: rgb(40, 37, 37);
+}
+
+.green {
+    color: rgb(10, 166, 10);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    background-color: #ffffff;
+    transition: all 0.5s linear;
+    position: relative;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    color: rgb(64, 64, 64);
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+    color: #cfcccc;
+}
+
+.menu li a.active {
+    color: #007bff;
+}
+
+.menu li i.fa-shopping-cart {
+    color: #007bff;
+}
+
+/* Main Content */
+.main-content {
+    background: rgb(216, 243, 252);
+    padding: 20px;
+    border-radius: 20px;
+    flex-grow: 1;
+    margin-left: 261px;
+    width: 1100px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-title {
+    color: #403f3f;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box {
+    background: rgb(230, 236, 246);
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* order completed */
+
+.order-completed {
+    background-color: #e0f7f3; /* Softer green */
+    border: 2px solid #b4e7dc; /* Subtle border */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease-in-out;
+}
+
+.order-completed:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-info p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.order-status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.order-status {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4caf50; /* Green for completed */
+    margin-bottom: 10px;
+}
+
+.order-actions {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.order-actions:hover {
+    background-color: #0056b3;
+}
+
+
+/*  */
+/* Tabular and Table Container Styling */
+.tabular-container {
+    background-color: #fbfdfc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.main-title {
+    color: #000;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+thead {
+    background-color: #f0f4f8;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: 600;
+    color: #333;
+}
+
+tbody tr {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.status {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status.completed {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status.pending {
+    background-color: #ff9800;
+    color: white;
+}
+
+.action-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Sidebar for Tablet and Mobile Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Collapse sidebar menu into a horizontal format */
+    .sidebar .menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu li {
+        margin: 10px;
+    }
+}
+
+/* Responsive Sidebar for Mobile (very small screens) */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none; /* Initially hidden on very small screens */
+    }
+
+    /* Show hamburger menu */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+    }
+
+    .hamburger.active + .sidebar {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 240px;
+        height: 100vh;
+        background-color: white;
+        z-index: 999;
+    }
+
+    .main-content {
+        margin-top: 20px;
+    }
+}
+
+/* Hide the hamburger icon by default */
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Sidebar is hidden on small screens */
+.sidebar {
+    transition: all 0.3s ease;
+}
+
+/* Sidebar will slide out when active */
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Media Queries for Mobile (small screens) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -240px; /* Initially hide the sidebar off-screen */
+        top: 0;
+        width: 240px;
+        height: 100vh;
+        background-color: #ffffff;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    /* Sidebar active state (when it's shown) */
+    .sidebar.active {
+        left: 0; /* Bring the sidebar on-screen */
+    }
+
+    /* Main content will adjust when sidebar is hidden */
+    .right-container {
+        margin-left: 0;
+    }
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+    
+    .tabular-container, .table-container {
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabular-container {
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .action-btn {
+        padding: 8px 15px;
+    }
+}
+
+/* Button Base Styling */
+.styled-btn {
+    background-color: #007bff;  /* Blue color for both buttons */
+    color: white;  /* White text */
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;  /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Smooth transition effects */
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);  /* Soft shadow for a 3D effect */
+}
+
+.styled-btn:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+    transform: translateY(-2px);  /* Slight lift on hover */
+}
+
+/* Specific Styling for Cancel Button */
+.cancel-btn {
+    border: 2px solid rgb(112, 197, 246);
+    color: rgb(112, 197, 246);
+    background-color: #fbfcfd;  /* Grey color for the "Cancel Order" button */
+    box-shadow: 0 4px 6px rgba(176, 187, 196, 0.3);  /* Matching shadow for grey button */
+}
+
+.cancel-btn:hover {
+    background-color: #cce2f4;  /* Darker grey on hover */
+}
+
+.last-pending {
+    background-color: #fbfdfc; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pending {
+    background-color: #aeeafc;
+    color: rgb(105, 199, 239);
+    padding: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 20px 0;
+        margin-left: 0;
+    }
+
+    .order-completed,
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .menu li {
+        padding: 10px;
+        margin: 8px 0;
+    }
+
+    .logo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .user img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .header-title span, 
+    .header-title h4 {
+        font-size: 18px;
+    }
+
+    .search-box input {
+        font-size: 12px;
+    }
+
+    .cancel button, 
+    .accept button {
+        padding: 8px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .menu li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a span {
+        display: none;
+    }
+
+    .menu a i {
+        font-size: 1.5rem;
+    }
+
+    .header-title span, 
+    .header-title h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .header-title p {
+        font-size: 14px;
+    }
+
+    .search-box input {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .main-content {
+        padding: 10px;
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .cancel button, 
+    .accept button {
+        padding: 8px;
+    }
+
+    .last-pending {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
