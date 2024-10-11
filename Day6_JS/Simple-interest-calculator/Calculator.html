@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Simple-Interest-Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Calculator.css">
+    </head>
+<body>
+    <div class="container">   
+       <div class="calculator">
+            <h2>Advanced Simple Interest Calculator</h2><br>
+            <label for="amount">Principal Amount:</label><br>            
+            <input type="number" placeholder="Enter principal amount" id="amount">
+            <br><br>
+            <label for="roi">Rate of Interest (%):</label><br>           
+            <input type="number" placeholder="Enter interest rate" id="roi">
+            <br><br>
+            <label for="time">Time (Years):</label><br> 
+            <input type="number" placeholder="Enter time in years" id="time">
+            <br><br>
+            <button type="button" onclick="calculateInterest()">Calculate Interest</button>
+            <br><br>
+            <p><b>Interest: </b><span id="result_1"></span></p><br>
+            <p><b>Total Amount: </b><span id="result_2"></span></p><br>
+            <p><b>Additional Informations: </b><span id="result_3"></span></p>
+
+       </div>
+    </div>     
+        <script src="Calculator.js"></script>
+    </body>
+</html>
