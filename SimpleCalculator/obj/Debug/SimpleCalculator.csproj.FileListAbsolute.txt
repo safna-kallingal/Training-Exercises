@@ -1,0 +1,7 @@
+C:\Users\91954\Desktop\Training-Exercises\Claysys\SimpleCalculator\bin\Debug\SimpleCalculator.exe.config
+C:\Users\91954\Desktop\Training-Exercises\Claysys\SimpleCalculator\bin\Debug\SimpleCalculator.exe
+C:\Users\91954\Desktop\Training-Exercises\Claysys\SimpleCalculator\bin\Debug\SimpleCalculator.pdb
+C:\Users\91954\Desktop\Training-Exercises\Claysys\SimpleCalculator\obj\Debug\SimpleCalculator.csproj.AssemblyReference.cache
+C:\Users\91954\Desktop\Training-Exercises\Claysys\SimpleCalculator\obj\Debug\SimpleCalculator.csproj.CoreCompileInputs.cache
+C:\Users\91954\Desktop\Training-Exercises\Claysys\SimpleCalculator\obj\Debug\SimpleCalculator.exe
+C:\Users\91954\Desktop\Training-Exercises\Claysys\SimpleCalculator\obj\Debug\SimpleCalculator.pdb
