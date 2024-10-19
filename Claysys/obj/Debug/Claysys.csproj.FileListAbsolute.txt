@@ -1,0 +1,7 @@
+C:\Users\91954\Desktop\Training-Exercises\Claysys\Claysys\bin\Debug\Claysys.exe.config
+C:\Users\91954\Desktop\Training-Exercises\Claysys\Claysys\bin\Debug\Claysys.exe
+C:\Users\91954\Desktop\Training-Exercises\Claysys\Claysys\bin\Debug\Claysys.pdb
+C:\Users\91954\Desktop\Training-Exercises\Claysys\Claysys\obj\Debug\Claysys.csproj.AssemblyReference.cache
+C:\Users\91954\Desktop\Training-Exercises\Claysys\Claysys\obj\Debug\Claysys.csproj.CoreCompileInputs.cache
+C:\Users\91954\Desktop\Training-Exercises\Claysys\Claysys\obj\Debug\Claysys.exe
+C:\Users\91954\Desktop\Training-Exercises\Claysys\Claysys\obj\Debug\Claysys.pdb

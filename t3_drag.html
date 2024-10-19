@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        /* Container for the draggable box */
+        .box {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            border: 2px solid black;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        /* Draggable element inside the box */
+        .draggable {
+            width: 150px;
+            height: 50px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            cursor: move;
+        }
+
+        /* Draggable element within the window */
+        .draggable-window {
+            width: 200px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            cursor: move;
+            margin-top: 50px;
+            position: absolute;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Draggable Exercises</h1>
+
+    <!-- Container Box -->
+    <div class="box">
+        <div class="draggable" id="dragBox">Drag Me Within Box</div>
+    </div>
+
+    <!-- Draggable Element within Window -->
+    <div class="draggable-window" id="dragWindow">Drag Me Within Window</div>
+
+    <footer>&copy; 2024 Draggable Divs Exercise</footer>
+
+    <script>
+        // Draggable inside the box
+        const dragBox = document.getElementById('dragBox');
+        const box = document.querySelector('.box');
+
+        dragBox.onmousedown = function (event) {
+            let shiftX = event.clientX - dragBox.getBoundingClientRect().left;
+            let shiftY = event.clientY - dragBox.getBoundingClientRect().top;
+
+            function moveAt(pageX, pageY) {
+                let newX = pageX - shiftX;
+                let newY = pageY - shiftY;
+
+                // Restrict movement within the box
+                const boxRect = box.getBoundingClientRect();
+                const dragRect = dragBox.getBoundingClientRect();
+
+                if (newX < 0) newX = 0;
+                if (newY < 0) newY = 0;
+                if (newX + dragRect.width > boxRect.width) newX = boxRect.width - dragRect.width;
+                if (newY + dragRect.height > boxRect.height) newY = boxRect.height - dragRect.height;
+
+                dragBox.style.left = newX + 'px';
+                dragBox.style.top = newY + 'px';
+            }
+
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+
+            dragBox.onmouseup = function () {
+                document.removeEventListener('mousemove', onMouseMove);
+                dragBox.onmouseup = null;
+            };
+        };
+
+        dragBox.ondragstart = function () {
+            return false;
+        };
+
+        // Draggable within the window
+        const dragWindow = document.getElementById('dragWindow');
+
+        dragWindow.onmousedown = function (event) {
+            let shiftX = event.clientX - dragWindow.getBoundingClientRect().left;
+            let shiftY = event.clientY - dragWindow.getBoundingClientRect().top;
+
+            function moveAt(pageX, pageY) {
+                dragWindow.style.left = pageX - shiftX + 'px';
+                dragWindow.style.top = pageY - shiftY + 'px';
+            }
+
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+
+            dragWindow.onmouseup = function () {
+                document.removeEventListener('mousemove', onMouseMove);
+                dragWindow.onmouseup = null;
+            };
+        };
+
+        dragWindow.ondragstart = function () {
+            return false;
+        };
+    </script>
+</body>
+</html>
